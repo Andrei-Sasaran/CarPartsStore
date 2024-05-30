@@ -7,7 +7,7 @@ namespace CarPartsStore.Models
 {
     public class CarParts
     {
-        public string portrait {  get; set; }
+        public int portrait {  get; set; }
         public int radiator { get; set; }
         public int suspension { get; set; }
         public int brakes { get; set; }

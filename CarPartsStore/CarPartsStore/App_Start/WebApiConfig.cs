@@ -18,7 +18,6 @@ namespace CarPartsStore
 
             config.Routes.MapHttpRoute(
                 name: "DefaultApi",
-                // in postman : http://localhost:XXXXX/api/{controller}
                 routeTemplate: "api/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );

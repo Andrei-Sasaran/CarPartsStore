@@ -13,9 +13,6 @@ namespace CarPartsStore.Models
         public string model { get; set; }
         public int year { get; set; }
         public string type { get; set; }
-        public int capacity { get; set; }
-        public int cylinderNumber { get; set; }
-        public string cylinderPlacement { get; set; }
         public string description { get; set; }
         public int stock { get; set; }
         public float price { get; set; }
