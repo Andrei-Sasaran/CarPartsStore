@@ -1,0 +1,11 @@
+Drop table CarParts
+Drop table Cars
+Drop table Chasis
+Drop table Engine
+Drop table MotorOil
+Drop table Radiator
+Drop table Suspension
+Drop table Transmision
+Drop table Users
+Drop table Wheels
+Drop table Brakes

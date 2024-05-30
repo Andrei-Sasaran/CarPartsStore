@@ -1,0 +1,632 @@
+{
+	"info": {
+		"_postman_id": "30f1c68d-6052-424b-9ba1-0cc5b750cb3e",
+		"name": "CarPartsStore",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "35319986"
+	},
+	"item": [
+		{
+			"name": "UsersController",
+			"item": [
+				{
+					"name": "GetTableUsers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:57468/api/Users"
+					},
+					"response": []
+				},
+				{
+					"name": "InsertIntoUsers",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"noi@exemplu.ex\",\r\n    \"password\":\"654321\",\r\n    \"userName\":\"JohnDoe\",\r\n    \"role\":0,\r\n    \"shoppingCart\":\"drujbe\",\r\n    \"totalPrice\":9.99\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:57468/api/Users"
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateUsersPassword",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"noi@exemplu.ex\",\r\n    \"password\":\"999999\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:57468/api/Users/UpdateUsersPassword"
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateUsersUsername",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"noi@exemplu.ex\",\r\n    \"password\":\"654321\",\r\n    \"userName\":\"JohnDoes\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:57468/api/Users/UpdateUsersUsername"
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateUsersShoppinCart",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"noi@exemplu.ex\",\r\n    \"shoppingCart\":\"drujbe,tigai\",\r\n    \"totalPrice\":9.99\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:57468/api/Users/UpdateUsersShoppinCart"
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteUser",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"noi@exemplu.ex\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:57468/api/Users"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "CarsController",
+			"item": [
+				{
+					"name": "GetTableCars",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:57468/api/Cars"
+					},
+					"response": []
+				},
+				{
+					"name": "InsertIntoCars",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Vin\":\"12345678901234567\",\r\n    \"location\":\"aici\",\r\n    \"manufacturer\":\"JohnDeere\",\r\n    \"fuelType\":\"apa\",\r\n    \"model\":\"XLR\",\r\n    \"engineSize\":999911,\r\n    \"engineType\":\"Jet\",\r\n    \"securityCode\":0,\r\n    \"modelYear\":2024,\r\n    \"assemblyPlant\":\"Deva\",\r\n    \"serialNumber\":420691\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:57468/api/Cars"
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteCar",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Vin\":1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:57468/api/Cars"
+					},
+					"response": []
+				},
+				{
+					"name": "InsertFromVin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Vin\":\"RVWDG7CC1BT246941\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:57468/api/Cars/PostFromVin"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "RadiatorController",
+			"item": [
+				{
+					"name": "GetTableRadiator",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:57468/api/Radiator"
+					},
+					"response": []
+				},
+				{
+					"name": "InsertIntoRadiator",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":\"0\",\r\n    \"name\":\"cooler\",\r\n    \"manufacturer\":\"emerson\",\r\n    \"model\":\"sstypton\",\r\n    \"year\":1999,\r\n    \"type\":\"cu elice\",\r\n    \"description\":\"nu prea mere\",\r\n    \"stock\":10,\r\n    \"price\":100.00\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:57468/api/Radiator"
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteRadiator",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:57468/api/Radiator"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "SuspensionController",
+			"item": [
+				{
+					"name": "GetTableSuspension",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:57468/api/Suspension"
+					},
+					"response": []
+				},
+				{
+					"name": "InsertIntoSuspension",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":\"2\",\r\n    \"name\":\"cooler\",\r\n    \"manufacturer\":\"emerson\",\r\n    \"model\":\"sstypton\",\r\n    \"year\":1999,\r\n    \"type\":\"cu elice\",\r\n    \"description\":\"nu prea mere\",\r\n    \"stock\":10,\r\n    \"price\":100.00\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:57468/api/Suspension"
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteSuspension",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:57468/api/Suspension"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "BrakesController",
+			"item": [
+				{
+					"name": "GetTableBrakes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:57468/api/Brakes"
+					},
+					"response": []
+				},
+				{
+					"name": "InsertIntoBrakes",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":\"0\",\r\n    \"name\":\"cooler\",\r\n    \"manufacturer\":\"emerson\",\r\n    \"model\":\"sstypton\",\r\n    \"year\":1999,\r\n    \"type\":\"cu elice\",\r\n    \"description\":\"nu prea mere\",\r\n    \"stock\":10,\r\n    \"price\":100.00\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:57468/api/Brakes"
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteBrakes",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:57468/api/Brakes"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "MotorOilController",
+			"item": [
+				{
+					"name": "GetTableMotorOil",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:57468/api/MotorOil"
+					},
+					"response": []
+				},
+				{
+					"name": "InsertIntoMotorOil",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":\"0\",\r\n    \"name\":\"cooler\",\r\n    \"manufacturer\":\"emerson\",\r\n    \"model\":\"sstypton\",\r\n    \"year\":1999,\r\n    \"type\":\"cu elice\",\r\n    \"description\":\"nu prea mere\",\r\n    \"stock\":10,\r\n    \"price\":100.00\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:57468/api/MotorOil"
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteMotorOil",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:57468/api/MotorOil"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "TransmisionController",
+			"item": [
+				{
+					"name": "GetTableTransmision",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:57468/api/Transmision"
+					},
+					"response": []
+				},
+				{
+					"name": "InsertIntoTransmision",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":\"0\",\r\n    \"name\":\"cooler\",\r\n    \"manufacturer\":\"emerson\",\r\n    \"model\":\"sstypton\",\r\n    \"year\":1999,\r\n    \"type\":\"cu elice\",\r\n    \"description\":\"nu prea mere\",\r\n    \"stock\":10,\r\n    \"price\":100.00\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:57468/api/Transmision"
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteTransmision",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:57468/api/Transmision"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "WheelsController",
+			"item": [
+				{
+					"name": "GetTableWheels",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:57468/api/Wheels"
+					},
+					"response": []
+				},
+				{
+					"name": "InsertIntoWheels",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":\"0\",\r\n    \"name\":\"cooler\",\r\n    \"manufacturer\":\"emerson\",\r\n    \"model\":\"sstypton\",\r\n    \"year\":1999,\r\n    \"type\":\"cu elice\",\r\n    \"description\":\"nu prea mere\",\r\n    \"stock\":10,\r\n    \"price\":100.00\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:57468/api/Wheels"
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteWheels",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:57468/api/Wheels"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ChasisController",
+			"item": [
+				{
+					"name": "GetTableChasis",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:57468/api/Chasis"
+					},
+					"response": []
+				},
+				{
+					"name": "InsertIntoChasis",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":\"0\",\r\n    \"name\":\"cooler\",\r\n    \"manufacturer\":\"emerson\",\r\n    \"model\":\"sstypton\",\r\n    \"year\":1999,\r\n    \"type\":\"cu elice\",\r\n    \"description\":\"nu prea mere\",\r\n    \"stock\":10,\r\n    \"price\":100.00\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:57468/api/Chasis"
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteChasis",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:57468/api/Chasis"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "EngineController",
+			"item": [
+				{
+					"name": "GetTableEngine",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:57468/api/Engine"
+					},
+					"response": []
+				},
+				{
+					"name": "InsertIntoEngine",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":\"0\",\r\n    \"name\":\"cooler\",\r\n    \"manufacturer\":\"emerson\",\r\n    \"model\":\"sstypton\",\r\n    \"year\":1999,\r\n    \"type\":\"cu elice\",\r\n    \"capacity\":9999,\r\n    \"cylinderNumber\":8,\r\n    \"cylinderPlacement\":\"v8\",\r\n    \"description\":\"nu prea mere\",\r\n    \"stock\":10,\r\n    \"price\":100.00\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:57468/api/Engine"
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteEngine",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:57468/api/Engine"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "CarPartsController",
+			"item": [
+				{
+					"name": "GetTableCarParts",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:57468/api/CarParts"
+					},
+					"response": []
+				},
+				{
+					"name": "InsertIntoCarParts",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"portrait\":\"ABCD9\",\r\n    \"radiator\":0,\r\n    \"suspension\":0,\r\n    \"brakes\":0,\r\n    \"motorOil\":0,\r\n    \"transmision\":0,\r\n    \"wheels\":0,\r\n    \"chasis\":0,\r\n    \"engine\":0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:57468/api/CarParts"
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteCarParts",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"portrait\":\"ABCD9\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:57468/api/CarParts"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
