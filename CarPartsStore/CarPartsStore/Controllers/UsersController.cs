@@ -36,35 +36,13 @@ namespace CarPartsStore.Controllers
                 string query = @"
                         insert into [Users] values
                         (
-                        '"+users.email+ @"',
-                        '"+users.password+ @"',
-                        '"+users.userName+ @"',
-                        '"+users.role+ @"',
-                        '"+users.shoppingCart+ @"',
-                        '"+users.totalPrice+@"'
+                        '" + users.email + @"',
+                        '" + users.password + @"',
+                        '" + users.userName + @"',
+                        '" + users.role + @"',
+                        '" + users.shoppingCart + @"',
+                        '" + users.totalPrice + @"'
                         )";
-                DataTable dataTable = new DataTable();
-                using( var connection = new SqlConnection(ConfigurationManager.ConnectionStrings["CarPartsStoreDB"].ConnectionString))
-                using (var cmd = new SqlCommand(query, connection))
-                using (var dataAdapter = new SqlDataAdapter(cmd))
-                {
-                    cmd.CommandType = CommandType.Text;
-                    dataAdapter.Fill(dataTable);
-                }
-                return "Added with succes!";
-            } catch (Exception)
-            {
-                return "Add failed!" ;
-            }
-        }
-        public string Delete(Users users)
-        {
-            try
-            {
-                string query = @"
-                        DELETE FROM Users
-                        WHERE email = '" + users.email + @"'
-                        ";
                 DataTable dataTable = new DataTable();
                 using (var connection = new SqlConnection(ConfigurationManager.ConnectionStrings["CarPartsStoreDB"].ConnectionString))
                 using (var cmd = new SqlCommand(query, connection))
@@ -73,11 +51,11 @@ namespace CarPartsStore.Controllers
                     cmd.CommandType = CommandType.Text;
                     dataAdapter.Fill(dataTable);
                 }
-                return "Deleted with succes!";
+                return "Added with succes!";
             }
             catch (Exception)
             {
-                return "Delete failed!";
+                return "Add failed!";
             }
         }
         [Route("api/Users/UpdateUsersPassword")]
@@ -88,8 +66,8 @@ namespace CarPartsStore.Controllers
             {
                 string query = @"
                     update [Users]
-                    set password='"+users.password+@"'
-                    where email='"+users.email+@"'
+                    set password='" + users.password + @"'
+                    where email='" + users.email + @"'
                     ";
                 DataTable dataTable = new DataTable();
                 using (var connection = new SqlConnection(ConfigurationManager.ConnectionStrings["CarPartsStoreDB"].ConnectionString))
@@ -156,36 +134,34 @@ namespace CarPartsStore.Controllers
             }
             catch (Exception ex)
             {
-                return "ShoppingCart update failed!" + ex.Message; 
+                return "ShoppingCart update failed!" + ex.Message;
             }
         }
-
         [Route("api/Users/Login")]
         [HttpPost]
         public Users Login(Users users)
         {
             string query = @"
                 select * from [Users]
-                where email = '"+users.email +@"'
-                and password = '"+users.password +@"'
+                where email = '" + users.email + @"'
+                and password = '" + users.password + @"'
                 ";
             DataTable dataTable = new DataTable();
             using (var connection = new SqlConnection(ConfigurationManager.ConnectionStrings["CarPartsStoreDB"].ConnectionString))
             using (var cmd = new SqlCommand(query, connection))
-                using (var dataAdapter = new SqlDataAdapter(cmd))
-                {
-                    cmd.CommandType = CommandType.Text;
-                    dataAdapter.Fill(dataTable);
-                }
+            using (var dataAdapter = new SqlDataAdapter(cmd))
+            {
+                cmd.CommandType = CommandType.Text;
+                dataAdapter.Fill(dataTable);
+            }
             if (dataTable.Rows.Count > 0)
             {
-                return "Valid User";
+                return users;
             }
             else
             {
-                return "Invalid User";
+                return users;
             }
-            
         }
     }
 }
