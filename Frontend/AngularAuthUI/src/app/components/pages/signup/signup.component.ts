@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
@@ -7,7 +7,7 @@ import { FormsModule } from '@angular/forms';
 @Component({
   selector: 'app-signup',
   standalone: true,
-  imports: [FormsModule],
+  imports: [FormsModule, HttpClientModule],
   templateUrl: './signup.component.html',
   styleUrl: './signup.component.css'
 })
@@ -25,11 +25,22 @@ export class SignupComponent {
   
   signupObject: Signup;
 
+  onInit() {
+
+  }
+
   constructor(private http: HttpClient) {
     this.signupObject = new Signup();
   }
 
   onSignup() {
+    if(this.signupObject.password != this.signupObject.passwordConfirm)
+      {
+        alert("Passwords don't match !")
+      }
+  }
+
+  isEmail(email:string) {
     
   }
 
@@ -38,10 +49,12 @@ export class SignupComponent {
 export class Signup {
   email:string;
   password:string;
+  passwordConfirm:string;
   username:string;
   constructor() {
     this.email='';
     this.password='';
+    this.passwordConfirm='';
     this.username='';
   }
 }
