@@ -16,6 +16,7 @@ export class SignupComponent {
   type: string = "password";
   isText: boolean = false;
   eyeIcon: string = "fa-eye";
+  messageToReturn: string ='';
 
   hideShowPass(){
     this.isText = !this.isText;
@@ -36,13 +37,17 @@ export class SignupComponent {
   onSignup() {
     if(this.signupObject.password != this.signupObject.passwordConfirm)
       {
-        alert("Passwords don't match !")
+        this.messageToReturn = "Passwords don't match !"
       }
   }
 
-  isEmail(email:string) {
-    
-  }
+  isValidEmail(email: string): boolean {
+    // Define the regular expression for a valid email address
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+    // Use the test method to check if the email matches the regex
+    return emailRegex.test(email);
+}
 
 }
 
