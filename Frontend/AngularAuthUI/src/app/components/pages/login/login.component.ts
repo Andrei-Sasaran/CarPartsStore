@@ -45,7 +45,7 @@ export class LoginComponent {
         this.pagesService.setEmail(this.loginObject.email);
         this.router.navigateByUrl('/dashboard');
       } else {
-        
+        alert("Invalid User !")
       }
       
     })  
