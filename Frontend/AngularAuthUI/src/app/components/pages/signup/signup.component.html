@@ -8,6 +8,20 @@
                     </div>
                     <div class="panerl-body p-3">
                         <form>
+                            <div *ngIf="passNoMatch" class="alert alert-failed">
+                                <strong>Passwords don't match!</strong>
+                                <button type="button" class="fa-solid fa-x " (click)="removePassNoMatch()"></button>
+                            </div>
+                            <div *ngIf="emailNotOk" class="alert alert-failed">
+                                <strong>Please enter a valid email !</strong>
+                                <button type="button" class="fa-solid fa-x " (click)="removeEmailNotOk()"></button>
+                            </div>
+                            <div class="form-group pt-3">
+                                <div class="input-field">
+                                    <span class="fa-solid fa-user p-2"></span>
+                                    <input type="text" placeholder="Username" [(ngModel)]="signupObject.username" name="username" required>
+                                </div>
+                            </div>
                             <div class="form-group pt-3">
                                 <div class="input-field">
                                     <span class="fa-regular fa-envelope p-2"></span>

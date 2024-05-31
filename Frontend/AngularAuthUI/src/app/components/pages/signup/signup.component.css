@@ -30,6 +30,10 @@ a:hover{
     border-radius: 15px;
 }
 
+.fa-x {
+    background-color: red;
+}
+
 .panel{
     min-height: 380px;
     box-shadow: 20px 20px 80px rgb(218, 218, 218);
@@ -45,6 +49,20 @@ a:hover{
     cursor: pointer;
     border: 1px solid #ddd;
     color: #4343ff;
+}
+
+.alert{
+    border-radius: 5px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    border: 1px solid #ddd;
+    color: #000000;
+}
+
+.alert-failed {
+    background-color: rgb(239, 239, 239);
 }
 
 .input-field.error{
