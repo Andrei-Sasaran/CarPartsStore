@@ -139,7 +139,7 @@ namespace CarPartsStore.Controllers
         }
         [Route("api/Users/Login")]
         [HttpPost]
-        public Users Login(Users users)
+        public string Login(Users users)
         {
             string query = @"
                 select * from [Users]
@@ -156,11 +156,11 @@ namespace CarPartsStore.Controllers
             }
             if (dataTable.Rows.Count > 0)
             {
-                return users;
+                return "Valid User";
             }
             else
             {
-                return users;
+                return "Invalid User";
             }
         }
     }

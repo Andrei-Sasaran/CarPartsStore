@@ -1,29 +1,29 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\sasar\\Code\\CarPartsStore_Main\\CarPartsStore\\",
+  "WorkspaceRootPath": "C:\\Users\\sasar\\Code\\Shared_Repositories\\CarPartsStore\\Backend\\CarPartsStore\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E0CCBC4C-AD35-4670-B2F4-0E25A33AA623}|CarPartsStore\\CarPartsStore.csproj|C:\\Users\\sasar\\Code\\CarPartsStore_Main\\CarPartsStore\\carpartsstore\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{E0CCBC4C-AD35-4670-B2F4-0E25A33AA623}|CarPartsStore\\CarPartsStore.csproj|c:\\users\\sasar\\code\\shared_repositories\\carpartsstore\\backend\\carpartsstore\\carpartsstore\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E0CCBC4C-AD35-4670-B2F4-0E25A33AA623}|CarPartsStore\\CarPartsStore.csproj|solutionrelative:carpartsstore\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E0CCBC4C-AD35-4670-B2F4-0E25A33AA623}|CarPartsStore\\CarPartsStore.csproj|C:\\Users\\sasar\\Code\\CarPartsStore_Main\\CarPartsStore\\carpartsstore\\controllers\\valuescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{E0CCBC4C-AD35-4670-B2F4-0E25A33AA623}|CarPartsStore\\CarPartsStore.csproj|C:\\Users\\sasar\\Code\\Shared_Repositories\\CarPartsStore\\Backend\\CarPartsStore\\carpartsstore\\controllers\\valuescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E0CCBC4C-AD35-4670-B2F4-0E25A33AA623}|CarPartsStore\\CarPartsStore.csproj|solutionrelative:carpartsstore\\controllers\\valuescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E0CCBC4C-AD35-4670-B2F4-0E25A33AA623}|CarPartsStore\\CarPartsStore.csproj|c:\\users\\sasar\\code\\carpartsstore_main\\carpartsstore\\carpartsstore\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "AbsoluteMoniker": "D:0:0:{E0CCBC4C-AD35-4670-B2F4-0E25A33AA623}|CarPartsStore\\CarPartsStore.csproj|C:\\Users\\sasar\\Code\\Shared_Repositories\\CarPartsStore\\Backend\\CarPartsStore\\carpartsstore\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
       "RelativeMoniker": "D:0:0:{E0CCBC4C-AD35-4670-B2F4-0E25A33AA623}|CarPartsStore\\CarPartsStore.csproj|solutionrelative:carpartsstore\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E0CCBC4C-AD35-4670-B2F4-0E25A33AA623}|CarPartsStore\\CarPartsStore.csproj|C:\\Users\\sasar\\Code\\CarPartsStore_Main\\CarPartsStore\\carpartsstore\\models\\chasis.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{E0CCBC4C-AD35-4670-B2F4-0E25A33AA623}|CarPartsStore\\CarPartsStore.csproj|C:\\Users\\sasar\\Code\\Shared_Repositories\\CarPartsStore\\Backend\\CarPartsStore\\carpartsstore\\models\\chasis.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E0CCBC4C-AD35-4670-B2F4-0E25A33AA623}|CarPartsStore\\CarPartsStore.csproj|solutionrelative:carpartsstore\\models\\chasis.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E0CCBC4C-AD35-4670-B2F4-0E25A33AA623}|CarPartsStore\\CarPartsStore.csproj|C:\\Users\\sasar\\Code\\CarPartsStore_Main\\CarPartsStore\\carpartsstore\\models\\users.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{E0CCBC4C-AD35-4670-B2F4-0E25A33AA623}|CarPartsStore\\CarPartsStore.csproj|C:\\Users\\sasar\\Code\\Shared_Repositories\\CarPartsStore\\Backend\\CarPartsStore\\carpartsstore\\models\\users.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E0CCBC4C-AD35-4670-B2F4-0E25A33AA623}|CarPartsStore\\CarPartsStore.csproj|solutionrelative:carpartsstore\\models\\users.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E0CCBC4C-AD35-4670-B2F4-0E25A33AA623}|CarPartsStore\\CarPartsStore.csproj|C:\\Users\\sasar\\Code\\CarPartsStore_Main\\CarPartsStore\\carpartsstore\\app_start\\webapiconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{E0CCBC4C-AD35-4670-B2F4-0E25A33AA623}|CarPartsStore\\CarPartsStore.csproj|C:\\Users\\sasar\\Code\\Shared_Repositories\\CarPartsStore\\Backend\\CarPartsStore\\carpartsstore\\app_start\\webapiconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E0CCBC4C-AD35-4670-B2F4-0E25A33AA623}|CarPartsStore\\CarPartsStore.csproj|solutionrelative:carpartsstore\\app_start\\webapiconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -40,9 +40,9 @@
               "$type": "Document",
               "DocumentIndex": 3,
               "Title": "Chasis.cs",
-              "DocumentMoniker": "C:\\Users\\sasar\\Code\\CarPartsStore_Main\\CarPartsStore\\CarPartsStore\\Models\\Chasis.cs",
+              "DocumentMoniker": "C:\\Users\\sasar\\Code\\Shared_Repositories\\CarPartsStore\\Backend\\CarPartsStore\\CarPartsStore\\Models\\Chasis.cs",
               "RelativeDocumentMoniker": "CarPartsStore\\Models\\Chasis.cs",
-              "ToolTip": "C:\\Users\\sasar\\Code\\CarPartsStore_Main\\CarPartsStore\\CarPartsStore\\Models\\Chasis.cs",
+              "ToolTip": "C:\\Users\\sasar\\Code\\Shared_Repositories\\CarPartsStore\\Backend\\CarPartsStore\\CarPartsStore\\Models\\Chasis.cs",
               "RelativeToolTip": "CarPartsStore\\Models\\Chasis.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -52,22 +52,21 @@
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "ValuesController.cs",
-              "DocumentMoniker": "C:\\Users\\sasar\\Code\\CarPartsStore_Main\\CarPartsStore\\CarPartsStore\\Controllers\\ValuesController.cs",
+              "DocumentMoniker": "C:\\Users\\sasar\\Code\\Shared_Repositories\\CarPartsStore\\Backend\\CarPartsStore\\CarPartsStore\\Controllers\\ValuesController.cs",
               "RelativeDocumentMoniker": "CarPartsStore\\Controllers\\ValuesController.cs",
-              "ToolTip": "C:\\Users\\sasar\\Code\\CarPartsStore_Main\\CarPartsStore\\CarPartsStore\\Controllers\\ValuesController.cs",
+              "ToolTip": "C:\\Users\\sasar\\Code\\Shared_Repositories\\CarPartsStore\\Backend\\CarPartsStore\\CarPartsStore\\Controllers\\ValuesController.cs",
               "RelativeToolTip": "CarPartsStore\\Controllers\\ValuesController.cs",
               "ViewState": "AQIAAAsAAAAAAAAAAAAAwAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-28T11:47:20.807Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-28T11:47:20.807Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
               "Title": "Users.cs",
-              "DocumentMoniker": "C:\\Users\\sasar\\Code\\CarPartsStore_Main\\CarPartsStore\\CarPartsStore\\Models\\Users.cs",
+              "DocumentMoniker": "C:\\Users\\sasar\\Code\\Shared_Repositories\\CarPartsStore\\Backend\\CarPartsStore\\CarPartsStore\\Models\\Users.cs",
               "RelativeDocumentMoniker": "CarPartsStore\\Models\\Users.cs",
-              "ToolTip": "C:\\Users\\sasar\\Code\\CarPartsStore_Main\\CarPartsStore\\CarPartsStore\\Models\\Users.cs",
+              "ToolTip": "C:\\Users\\sasar\\Code\\Shared_Repositories\\CarPartsStore\\Backend\\CarPartsStore\\CarPartsStore\\Models\\Users.cs",
               "RelativeToolTip": "CarPartsStore\\Models\\Users.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAsAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -77,11 +76,11 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "UsersController.cs",
-              "DocumentMoniker": "C:\\Users\\sasar\\Code\\CarPartsStore_Main\\CarPartsStore\\CarPartsStore\\Controllers\\UsersController.cs",
+              "DocumentMoniker": "C:\\Users\\sasar\\Code\\Shared_Repositories\\CarPartsStore\\Backend\\CarPartsStore\\CarPartsStore\\Controllers\\UsersController.cs",
               "RelativeDocumentMoniker": "CarPartsStore\\Controllers\\UsersController.cs",
-              "ToolTip": "C:\\Users\\sasar\\Code\\CarPartsStore_Main\\CarPartsStore\\CarPartsStore\\Controllers\\UsersController.cs",
+              "ToolTip": "C:\\Users\\sasar\\Code\\Shared_Repositories\\CarPartsStore\\Backend\\CarPartsStore\\CarPartsStore\\Controllers\\UsersController.cs",
               "RelativeToolTip": "CarPartsStore\\Controllers\\UsersController.cs",
-              "ViewState": "AQIAAJQAAAAAAAAAAAAmwKUAAAAFAAAA",
+              "ViewState": "AQIAAJEAAAAAAAAAAAAmwKEAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-28T11:30:52.711Z",
               "EditorCaption": ""
@@ -90,9 +89,9 @@
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "Web.config",
-              "DocumentMoniker": "C:\\Users\\sasar\\Code\\CarPartsStore_Main\\CarPartsStore\\CarPartsStore\\Web.config",
+              "DocumentMoniker": "C:\\Users\\sasar\\Code\\Shared_Repositories\\CarPartsStore\\Backend\\CarPartsStore\\CarPartsStore\\Web.config",
               "RelativeDocumentMoniker": "CarPartsStore\\Web.config",
-              "ToolTip": "C:\\Users\\sasar\\Code\\CarPartsStore_Main\\CarPartsStore\\CarPartsStore\\Web.config",
+              "ToolTip": "C:\\Users\\sasar\\Code\\Shared_Repositories\\CarPartsStore\\Backend\\CarPartsStore\\CarPartsStore\\Web.config",
               "RelativeToolTip": "CarPartsStore\\Web.config",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAOAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
@@ -103,9 +102,9 @@
               "$type": "Document",
               "DocumentIndex": 5,
               "Title": "WebApiConfig.cs",
-              "DocumentMoniker": "C:\\Users\\sasar\\Code\\CarPartsStore_Main\\CarPartsStore\\CarPartsStore\\App_Start\\WebApiConfig.cs",
+              "DocumentMoniker": "C:\\Users\\sasar\\Code\\Shared_Repositories\\CarPartsStore\\Backend\\CarPartsStore\\CarPartsStore\\App_Start\\WebApiConfig.cs",
               "RelativeDocumentMoniker": "CarPartsStore\\App_Start\\WebApiConfig.cs",
-              "ToolTip": "C:\\Users\\sasar\\Code\\CarPartsStore_Main\\CarPartsStore\\CarPartsStore\\App_Start\\WebApiConfig.cs",
+              "ToolTip": "C:\\Users\\sasar\\Code\\Shared_Repositories\\CarPartsStore\\Backend\\CarPartsStore\\CarPartsStore\\App_Start\\WebApiConfig.cs",
               "RelativeToolTip": "CarPartsStore\\App_Start\\WebApiConfig.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAeAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
