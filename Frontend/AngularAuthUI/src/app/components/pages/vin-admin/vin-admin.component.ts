@@ -36,9 +36,9 @@ export class VinAdminComponent {
       this.renderer.setProperty(this.infoPanel.nativeElement, 'hidden', false);
     }
   }
- 
+
   onClickProcess() {
-    debugger; 
+    debugger;
     console.log(this.isValidVin(this.vinPostObject.vin))
     if (this.isValidVin(this.vinPostObject.vin)) {
       this.vinNotOK = false;
@@ -46,7 +46,7 @@ export class VinAdminComponent {
     else {
       this.vinNotOK = true;
     }
-    if(!this.vinNotOK){
+    if (!this.vinNotOK) {
       this.decodeVin();
     }
   }
@@ -54,7 +54,7 @@ export class VinAdminComponent {
     this.http.post('http://localhost:57468/api/Cars/PostFromVIN', this.vinPostObject).subscribe((data) => {
       if (data == "Add from VIN succeded!") {
         this.exchange();
-      } 
+      }
     })
   }
 
