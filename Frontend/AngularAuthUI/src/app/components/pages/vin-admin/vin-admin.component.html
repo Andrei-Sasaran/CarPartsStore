@@ -17,15 +17,15 @@
                     </li>
                     <li class="nav-item">
                         <div class="dropdown">
-                        <button class="fa-solid dropbtn bg-dark">Parts</button>
+                            <button class="fa-solid dropbtn bg-dark">Parts</button>
                             <div class="fa-solid dropdown-content">
-                            <a>Brakes</a>
-                            <a>Engines</a>
-                            <a>Oils</a>
-                            <a>Radiators</a>
-                            <a>Suspensions</a>
-                            <a>Transmisions</a>
-                            <a>Brakes</a>
+                                <a>Brakes</a>
+                                <a>Engines</a>
+                                <a>Oils</a>
+                                <a>Radiators</a>
+                                <a>Suspensions</a>
+                                <a>Transmisions</a>
+                                <a>Brakes</a>
                             </div>
                         </div>
                     </li>
@@ -48,11 +48,15 @@
                 <div class="enter-heading">
                     <button class="btn-enter btn-primary" (click)="onClickProcess()">Process</button>
                 </div>
-                <div *ngIf="vinNotOK" class="alert alert-failed">
+                <div style="background-color:#141c85; color: white;" *ngIf="vinNotOK" class="alert">
                     <strong>
-                        Invalid VIN! Please enter a valid17-character VIN consisting of uppercase letters and numbers.
+                        <p style="text-align: center;">Invalid VIN! (check VIN MAP)</p>
+                        <p style="text-align: center;">Please enter a valid 17-character VIN</p>
+                        <p style="text-align: center;">note: only uppercase letters and numbers</p>
                     </strong>
-                    <button type="button" class="fa-solid fa-x " (click)="removevinNotOk()"></button>
+                    <div class="text-center">
+                        <button type="button" class=" close-alert fa-x" (click)="removevinNotOk()"></button>
+                    </div>
                 </div>
             </form>
         </div>
