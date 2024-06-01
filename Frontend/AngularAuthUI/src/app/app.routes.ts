@@ -4,30 +4,51 @@ import { LayoutComponent } from './components/pages/layout/layout.component';
 import { DashboardComponent } from './components/pages/dashboard/dashboard.component';
 import { SignupComponent } from './components/pages/signup/signup.component';
 import { PartsTemplateComponent } from './components/pages/parts-template/parts-template.component';
+import { VINComponent } from './components/pages/vin/vin.component';
+import { AccountComponent } from './components/pages/account/account.component';
+import { PassThrough } from 'stream';
+import { PasswordResetComponent } from './components/pages/password-reset/password-reset.component';
+import { CartComponent } from './components/pages/cart/cart.component';
 
 export const routes: Routes = [
     {
-        path: '', redirectTo: 'login', pathMatch:'full'
+        path: '', redirectTo: 'login', pathMatch: 'full'
     },
     {
-        path:'login',
-        component:LoginComponent
+        path: 'login',
+        component: LoginComponent
     },
     {
-        path:'',
-        component:LayoutComponent,
-        children:[
+        path: '',
+        component: LayoutComponent,
+        children: [
             {
-                path:'dashboard',
-                component:DashboardComponent
+                path: 'dashboard',
+                component: DashboardComponent
             },
             {
-                path:'signup',
-                component:SignupComponent
+                path: 'signup',
+                component: SignupComponent
             },
             {
-                path:'parts-template',
-                component:PartsTemplateComponent
+                path: 'parts-template',
+                component: PartsTemplateComponent
+            },
+            {
+                path: 'vin',
+                component: VINComponent
+            },
+            {
+                path: 'account',
+                component: AccountComponent
+            },
+            {
+                path: 'password-reset',
+                component: PasswordResetComponent
+            },
+            {
+                path: 'cart',
+                component: CartComponent
             }
         ]
     }

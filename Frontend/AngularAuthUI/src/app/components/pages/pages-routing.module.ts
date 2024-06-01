@@ -4,6 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
+import { PasswordResetComponent } from './password-reset/password-reset.component';
 
 const routes: Routes = [{
   path: "dashboard",
@@ -12,6 +13,10 @@ const routes: Routes = [{
   {
     path: "login",
     component: LoginComponent
+  },
+  {
+    path: "password-reset",
+    component: PasswordResetComponent
   }
 ];
 

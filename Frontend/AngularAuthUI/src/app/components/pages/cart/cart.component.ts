@@ -1,16 +1,15 @@
-import { Component, Input } from '@angular/core';
+import { Component } from '@angular/core';
 import { PagesService } from '../pages.service';
-import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-dashboard',
+  selector: 'app-cart',
   standalone: true,
-  imports: [FormsModule],
-  templateUrl: './dashboard.component.html',
-  styleUrl: './dashboard.component.css'
+  imports: [],
+  templateUrl: './cart.component.html',
+  styleUrl: './cart.component.css'
 })
-export class DashboardComponent {
+export class CartComponent {
 
   email:string='';
   
@@ -22,19 +21,19 @@ export class DashboardComponent {
     
   }
 
+  toDashboard() {
+    this.pagesService.setEmail(this.email);
+    this.router.navigateByUrl('/dashboard');
+  }
+
   toAccount() {
     this.pagesService.setEmail(this.email);
     this.router.navigateByUrl('/account');
-  }
-
-  toCart() {
-    this.pagesService.setEmail(this.email);
-    this.router.navigateByUrl('/cart');
   }
 
   toVin() {
     this.pagesService.setEmail(this.email);
     this.router.navigateByUrl('/vin');
   }
-  
+
 }

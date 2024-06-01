@@ -4,58 +4,11 @@
 }
 
 .outer-image {
-    height: 200vh;
+    height: 100vh;
     background-image: url('../../../../../../../Images/CarPartsStoreIMAGE.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top;
-}
-
-.panel-heading {
-    text-align: center;
-    margin-bottom: 10px;
-}
-
-#forget {
-    min-width: 100px;
-    margin-left: auto;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-a:hover {
-    text-decoration: none;
-}
-
-.form-inline label {
-    padding-left: 10px;
-    margin: 0;
-    cursor: pointer;
-}
-
-.btn {
-    border-radius: 15px;
-}
-
-.panel {
-    min-height: 380px;
-    box-shadow: 20px 20px 80px rgb(218, 218, 218);
-    border-radius: 12px;
-    margin-top: 100px;
-}
-
-.input-field {
-    border-radius: 0px;
-    padding: 20px;
-    padding-left: 70%;
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    color: #4343ff;
-}
-
-.fa-solid {
-    cursor: pointer;
 }
 
 .nav-item {
@@ -63,36 +16,57 @@ a:hover {
     padding-left: 30px;
 }
 
-.input-field.error {
-    border: 1px solid red;
-    color: red;
-}
-
-input[type='text'],
-input[type='password'] {
-    border: none;
-    outline: none;
-    box-shadow: none;
-    width: 100%;
-}
-
 .fa-screwdriver-wrench {
     font-size: 32px;
     padding-left: 25px;
 }
 
-.fa-eye-slash.btn {
-    border: none;
-    outline: none;
-    box-shadow: none;
+
+.enter-heading {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
-img {
-    width: 40px;
-    height: 40px;
-    object-fit: cover;
-    border-radius: 50%;
-    position: relative;
+.panel {
+    align-content: center;
+    min-height: 500px;
+    box-shadow: 20px 20px 80px rgb(218, 218, 218);
+    border-radius: 20px;
+    margin-top: 100px;
+    background: radial-gradient(circle, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 45%, rgba(0, 212, 255, 1) 100%);
+}
+
+.input-field {
+    max-width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.box-fade {
+    text-align: center;
+    margin-left: 30%;
+    margin-right: 30%;
+    place-self: center;
+    background: rgb(2, 0, 36);
+    background: radial-gradient(circle, rgb(11, 141, 228) 0%, rgb(18, 125, 187) 45%, rgba(0, 212, 255, 1) 100%);
+}
+
+.p-title {
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    margin-bottom: 2%;
+}
+
+.btn-enter {
+    margin-top: 1%;
+    height: 50px;
+    width: 20%;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 200%;
 }
 
 .panel-image {
@@ -105,6 +79,7 @@ img {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top;
+
 }
 
 /* Dropdown Button */

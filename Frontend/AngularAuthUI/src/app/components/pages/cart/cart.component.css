@@ -4,7 +4,7 @@
 }
 
 .outer-image {
-    height: 200vh;
+    height: 100vh;
     background-image: url('../../../../../../../Images/CarPartsStoreIMAGE.jpg');
     background-size: cover;
     background-repeat: no-repeat;
@@ -54,10 +54,6 @@ a:hover {
     color: #4343ff;
 }
 
-.fa-solid {
-    cursor: pointer;
-}
-
 .nav-item {
     padding: 10px;
     padding-left: 30px;
@@ -93,18 +89,6 @@ img {
     object-fit: cover;
     border-radius: 50%;
     position: relative;
-}
-
-.panel-image {
-    margin: auto;
-    height: 90%;
-    width: 90%;
-    border-radius: 12px;
-    align-self: center;
-    background-image: url('../../../../../../../Images/CarPartsStoreIMAGE.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: top;
 }
 
 /* Dropdown Button */
