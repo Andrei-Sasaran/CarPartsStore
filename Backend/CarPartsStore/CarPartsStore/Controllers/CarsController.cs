@@ -327,7 +327,7 @@ namespace CarPartsStore.Controllers
                 string query = @"
                         insert into [Cars] values
                         (
-                        '" + cars.Vin + @"',
+                        '" + cars.VIN + @"',
                         '" + cars.location + @"',
                         '" + cars.manufacturer + @"',
                         '" + cars.fuelType + @"',
@@ -354,13 +354,13 @@ namespace CarPartsStore.Controllers
                 return "Add failed!";
             }
         }
-        [Route("api/Cars/PostFromVin")]
+        [Route("api/Cars/PostFromVIN")]
         [HttpPost]
         public string PostFromVIN(Cars cars)
         {
             try
             {
-                VIN vin = new VIN(cars.Vin);
+                VIN vin = new VIN(cars.VIN);
                 string query = @"
                         insert into [Cars] values
                         (
@@ -397,7 +397,7 @@ namespace CarPartsStore.Controllers
             {
                 string query = @"
                         DELETE FROM Cars
-                        WHERE Vin = '" + cars.Vin + @"'
+                        WHERE VIN = '" + cars.VIN + @"'
                         ";
                 DataTable dataTable = new DataTable();
                 using (var connection = new SqlConnection(ConfigurationManager.ConnectionStrings["CarPartsStoreDB"].ConnectionString))

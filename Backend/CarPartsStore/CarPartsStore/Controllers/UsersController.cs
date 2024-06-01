@@ -9,6 +9,7 @@ using System.Net;
 using System.Net.Http;
 using System.Runtime.Remoting.Messaging;
 using System.Web.Http;
+using System.Web.UI.WebControls;
 
 namespace CarPartsStore.Controllers
 {
@@ -161,6 +162,38 @@ namespace CarPartsStore.Controllers
             else
             {
                 return "Invalid User";
+            }
+        }
+        [Route("api/Users/WhoAmI")]
+        [HttpPost]
+        public string WhoAmI(Users users)
+        {
+            try
+            {
+                string query = @"
+                    select role from [Users]
+                    where email='" + users.email + @"'
+                    ";
+                DataTable dataTable = new DataTable();
+                using (var connection = new SqlConnection(ConfigurationManager.ConnectionStrings["CarPartsStoreDB"].ConnectionString))
+                using (var cmd = new SqlCommand(query, connection))
+                using (var dataAdapter = new SqlDataAdapter(cmd))
+                {
+                    cmd.CommandType = CommandType.Text;
+                    dataAdapter.Fill(dataTable);
+                }
+                if (dataTable.Rows.Count == 1)
+                {
+                    return $"{dataTable.Rows[0][0]}";
+                }
+                else
+                {
+                    return "-1";
+                }
+            }
+            catch (Exception ex)
+            {
+                return "Who Am I failed!" + ex.Message;
             }
         }
     }
