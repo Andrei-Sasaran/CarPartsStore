@@ -14,6 +14,10 @@ import { error } from 'console';
   styleUrl: './vin.component.css'
 })
 export class VINComponent {
+
+  email:string='';
+  send:string = '';
+
   @ViewChild('decoder') decoderPanel!: ElementRef;
   @ViewChild('info') infoPanel!: ElementRef;
 
@@ -22,9 +26,10 @@ export class VINComponent {
   vinPostObject: VinPost;
   vinObject: VinShow;
 
-  constructor(private http: HttpClient, private renderer: Renderer2) {
+  constructor(private pagesService:PagesService, private http: HttpClient, private router: Router, private renderer: Renderer2) {
     this.vinPostObject = new VinPost;
     this.vinObject = new VinShow;
+    this.pagesService.getEmail.subscribe(e => this.email = e);;
   }
 
   exchange() {
@@ -38,7 +43,6 @@ export class VINComponent {
   }
  
   onClickProcess() {
-    debugger; 
     console.log(this.isValidVin(this.vinPostObject.vin))
     if (this.isValidVin(this.vinPostObject.vin)) {
       this.vinNotOK = false;
@@ -51,10 +55,12 @@ export class VINComponent {
     }
   }
   decodeVin() {
-    this.http.post('http://localhost:57468/api/Cars/PostFromVIN', this.vinPostObject).subscribe((data) => {
-      if (data == "Add from VIN succeded!") {
-        this.exchange();
-      } 
+    this.http.post('http://localhost:57468/api/Cars/GetCarsByVIN', this.vinPostObject).subscribe((data:any) => {
+      console.log(data);
+      // this.vinObject = data.recivedCar;
+      // if (data.httpResponse) {
+      //   this.exchange();
+      // } 
     })
   }
 
@@ -62,8 +68,24 @@ export class VINComponent {
     const regex = /^[A-Z0-9]{17}$/;
     return regex.test(input);
   }
+
   removevinNotOk() {
     this.vinNotOK = false;
+  }
+
+  toDashboard() {
+    this.pagesService.setEmail(this.email);
+    this.router.navigateByUrl('/dashboard');
+  }
+
+  toAccount() {
+    this.pagesService.setEmail(this.email);
+    this.router.navigateByUrl('/account');
+  }
+
+  toCart() {
+    this.pagesService.setEmail(this.email);
+    this.router.navigateByUrl('/cart');
   }
 
 }
@@ -94,6 +116,16 @@ export class VinShow {
 
   }
 }
+
+export class VinRecieve {
+  httpResponse: any;
+  recivedCar: VinShow;
+  constructor(httpResponse:any, recivedCar:VinShow) {
+    this.httpResponse = httpResponse;
+    this.recivedCar = recivedCar
+  }
+}
+
 export class VinPost {
   vin: string;
   constructor() {

@@ -8,6 +8,7 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 using CarPartsStore.Models;
+using System.Web;
 
 namespace CarPartsStore.Controllers
 {
@@ -413,6 +414,24 @@ namespace CarPartsStore.Controllers
             {
                 return "Delete failed!";
             }
+        }
+        [Route("api/Cars/GetCarsByVIN")]
+        [HttpPost]
+        public HttpResponseMessage GetCarsByVIN(Cars vin)
+        {
+            string query = @"
+                    select * from [Cars]
+                    where Vin = '" + vin.VIN + @"'
+                    ";
+            DataTable dataTable = new DataTable();
+            using (var connection = new SqlConnection(ConfigurationManager.ConnectionStrings["CarPartsStoreDB"].ConnectionString))
+            using (var cmd = new SqlCommand(query, connection))
+            using (var dataAdapter = new SqlDataAdapter(cmd))
+            {
+                cmd.CommandType = CommandType.Text;
+                dataAdapter.Fill(dataTable);
+            }
+            return Request.CreateResponse(HttpStatusCode.OK, dataTable);
         }
     }
 }
