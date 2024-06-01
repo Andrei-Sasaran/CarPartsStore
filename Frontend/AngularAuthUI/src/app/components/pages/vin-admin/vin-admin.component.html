@@ -1,0 +1,67 @@
+<div class="outer-image">
+    <nav class="navbar-expand-sm bg-dark">
+        <div class="container-fluid">
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="fa-solid fa-screwdriver-wrench"></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="fa-solid fa-house" href="/dashboard"> Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="fa-solid fa-user" href="/account)"> Account</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="fa-solid fa-cart-shopping" href="/cart"> Cart</a>
+                    </li>
+                    <li class="nav-item">
+                        <div class="dropdown">
+                        <button class="fa-solid dropbtn bg-dark">Parts</button>
+                            <div class="fa-solid dropdown-content">
+                            <a>Brakes</a>
+                            <a>Engines</a>
+                            <a>Oils</a>
+                            <a>Radiators</a>
+                            <a>Suspensions</a>
+                            <a>Transmisions</a>
+                            <a>Brakes</a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div #decoder class="panel">
+            <h2 class="font-weight-bold text-center">
+                <p class="p-title">VIN Decoder</p>
+            </h2>
+            <form>
+                <div class="input-field">
+                    <span class="fa-regular text-center"></span>
+                    <input type="text" size="40%" placeholder="VIN" [(ngModel)]="vinPostObject.vin" name="vin" required>
+
+                </div>
+                <div class="enter-heading">
+                    <button class="btn-enter btn-primary" (click)="onClickProcess()">Process</button>
+                </div>
+                <div *ngIf="vinNotOK" class="alert alert-failed">
+                    <strong>
+                        Invalid VIN! Please enter a valid17-character VIN consisting of uppercase letters and numbers.
+                    </strong>
+                    <button type="button" class="fa-solid fa-x " (click)="removevinNotOk()"></button>
+                </div>
+            </form>
+        </div>
+        <div #info class="panel" [hidden]="true">
+            <h2 class="font-weight-bold text-center">
+                <p class="p-title">INFO</p>
+                <button class="btn-enter btn-primary" (click)="exchange() ">Back</button>
+            </h2>
+            <!-- Add content here to display VIN information -->
+        </div>
+    </div>
+</div>

@@ -1,0 +1,138 @@
+.outer {
+    height: 100vh;
+    background: linear-gradient(to top, #c9c9ff 50%, #6e6ef6 90%) no-repeat;
+}
+
+.outer-image {
+    height: 100vh;
+    background-image: url('../../../../../../../Images/CarPartsStoreIMAGE.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+}
+
+.nav-item {
+    padding: 10px;
+    padding-left: 30px;
+}
+
+.fa-screwdriver-wrench {
+    font-size: 32px;
+    padding-left: 25px;
+}
+
+.alert-failed {
+    background-color: rgb(239, 239, 239);
+}
+
+.alert{
+    border-radius: 5px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    border: 1px solid #ddd;
+    color: #000000;
+}
+
+.enter-heading {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.panel {
+    align-content: center;
+    min-height: 500px;
+    box-shadow: 20px 20px 80px rgb(218, 218, 218);
+    border-radius: 20px;
+    margin-top: 100px;
+    background: radial-gradient(circle, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 45%, rgba(0, 212, 255, 1) 100%);
+}
+
+.input-field {
+    max-width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.box-fade {
+    text-align: center;
+    margin-left: 30%;
+    margin-right: 30%;
+    place-self: center;
+    background: rgb(2, 0, 36);
+    background: radial-gradient(circle, rgb(11, 141, 228) 0%, rgb(18, 125, 187) 45%, rgba(0, 212, 255, 1) 100%);
+}
+
+.p-title {
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    margin-bottom: 2%;
+}
+
+.btn-enter {
+    margin-top: 1%;
+    height: 50px;
+    width: 20%;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 200%;
+}
+
+.panel-image {
+    margin: auto;
+    height: 90%;
+    width: 90%;
+    border-radius: 12px;
+    align-self: center;
+    background-image: url('../../../../../../../Images/CarPartsStoreIMAGE.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+
+}
+
+/* Dropdown Button */
+.dropbtn {
+    /* background-color: #4343ff; */
+    color: #337ab7;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+  }
+  
+  /* The container <div> - needed to position the dropdown content */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {background-color: #337ab7;}
+  
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {display: block;}
+  
+  /* Change the background color of the dropdown button when the dropdown content is shown */
+  .dropdown:hover .dropbtn {background-color: #337ab7;}
