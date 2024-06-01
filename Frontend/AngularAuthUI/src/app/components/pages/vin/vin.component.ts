@@ -36,22 +36,25 @@ export class VINComponent {
       this.renderer.setProperty(this.infoPanel.nativeElement, 'hidden', false);
     }
   }
-
+ 
   onClickProcess() {
+    debugger; 
+    console.log(this.isValidVin(this.vinPostObject.vin))
     if (this.isValidVin(this.vinPostObject.vin)) {
       this.vinNotOK = false;
     }
     else {
       this.vinNotOK = true;
     }
+    if(!this.vinNotOK){
+      this.decodeVin();
+    }
   }
   decodeVin() {
     this.http.post('http://localhost:57468/api/Cars/PostFromVIN', this.vinPostObject).subscribe((data) => {
       if (data == "Add from VIN succeded!") {
         this.exchange();
-      } else {
-        alert("Invalid VIN!")
-      }
+      } 
     })
   }
 

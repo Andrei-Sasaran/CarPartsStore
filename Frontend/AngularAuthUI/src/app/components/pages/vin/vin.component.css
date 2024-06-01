@@ -21,6 +21,19 @@
     padding-left: 25px;
 }
 
+.alert-failed {
+    background-color: rgb(239, 239, 239);
+}
+
+.alert{
+    border-radius: 5px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    border: 1px solid #ddd;
+    color: #000000;
+}
 
 .enter-heading {
     text-align: center;
