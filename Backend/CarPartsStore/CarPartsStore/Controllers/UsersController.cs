@@ -196,5 +196,23 @@ namespace CarPartsStore.Controllers
                 return "Who Am I failed!" + ex.Message;
             }
         }
+        [Route("api/Users/GetUserByEmail")]
+        [HttpPost]
+        public HttpResponseMessage GetUsersByEmail(Users users)
+        {
+            string query = @"
+                    select * from [Users]
+                    where email = '" + users.email + @"'
+                    ";
+            DataTable dataTable = new DataTable();
+            using (var connection = new SqlConnection(ConfigurationManager.ConnectionStrings["CarPartsStoreDB"].ConnectionString))
+            using (var cmd = new SqlCommand(query, connection))
+            using (var dataAdapter = new SqlDataAdapter(cmd))
+            {
+                cmd.CommandType = CommandType.Text;
+                dataAdapter.Fill(dataTable);
+            }
+            return Request.CreateResponse(HttpStatusCode.OK, dataTable);
+        }
     }
 }
