@@ -58,7 +58,48 @@
         </div>
         <div #info class="panel" [hidden]="true">
             <h2 class="font-weight-bold text-center">
-                <p class="p-title">INFO</p>
+                <p class="p-info">Here is the data about your car according to our database</p>
+                <style type="text/css">
+                    .tg  {border-collapse:collapse;border-spacing:0;}
+                    .tg td{border-color:rgb(255, 255, 255);border-style:solid;border-width:3px;font-family:Arial, sans-serif;font-size:14px;
+                      overflow:hidden;padding:10px 5px;word-break:normal;align-self:center;}
+                    .tg th{border-color:rgb(255, 255, 255);border-style:solid;border-width:3px;font-family:Arial, sans-serif;font-size:14px;
+                      font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+                    .tg .tg-baqh{text-align:center;vertical-align:top;color: #ffffff;}
+                    .tg .tg-0lax{text-align:center;vertical-align:top;color: #ffffff;}
+                    </style>
+                <div class="mx-auto">
+                    <table class="tg center"><thead>
+                        <tr>
+                            <th class="tg-baqh">VIN</th>
+                            <th class="tg-0lax">Location</th>
+                            <th class="tg-baqh">Manufacturer</th>
+                            <th class="tg-0lax">Fuel Type</th>
+                            <th class="tg-0lax">Model</th>
+                            <th class="tg-0lax">Engine Size [cm^3]</th>
+                            <th class="tg-0lax">Engine Type</th>
+                            <th class="tg-0lax">Security Code</th>
+                            <th class="tg-0lax">Model Year</th>
+                            <th class="tg-0lax">Assembly Plant</th>
+                            <th class="tg-0lax">Serial Number</th>
+                          </tr></thead>
+                        <tbody>
+                        <tr>
+                        <td class="tg-0lax">{{vinObject.vin}}</td>
+                        <td class="tg-0lax">{{vinObject.location}}</td>
+                        <td class="tg-0lax">{{vinObject.manufacturer}}</td>
+                        <td class="tg-0lax">{{vinObject.fuelType}}</td>
+                        <td class="tg-0lax">{{vinObject.model}}</td>
+                        <td class="tg-0lax">{{vinObject.engineSize}}</td>
+                        <td class="tg-0lax">{{vinObject.engineType}}</td>
+                        <td class="tg-0lax">{{vinObject.securityCode}}</td>
+                        <td class="tg-0lax">{{vinObject.modelYear}}</td>
+                        <td class="tg-0lax">{{vinObject.assemblyPlant}}</td>
+                        <td class="tg-0lax">{{vinObject.serialNumber}}</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
                 <button class="btn-enter btn-primary" (click)="exchange() ">Back</button>
             </h2>
             <!-- Add content here to display VIN information -->

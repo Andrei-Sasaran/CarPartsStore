@@ -56,11 +56,18 @@ export class VINComponent {
   }
   decodeVin() {
     this.http.post('http://localhost:57468/api/Cars/GetCarsByVIN', this.vinPostObject).subscribe((data:any) => {
-      console.log(data);
-      // this.vinObject = data.recivedCar;
-      // if (data.httpResponse) {
-      //   this.exchange();
-      // } 
+      this.vinObject.vin = data[0].Vin;
+      this.vinObject.location = data[0].location;
+      this.vinObject.manufacturer = data[0].manufacturer;
+      this.vinObject.fuelType = data[0].fuelType;
+      this.vinObject.model = data[0].model;
+      this.vinObject.engineSize = data[0].engineSize;
+      this.vinObject.engineType = data[0].engineType;
+      this.vinObject.securityCode = data[0].securityCode;
+      this.vinObject.modelYear = data[0].modelYear;
+      this.vinObject.assemblyPlant = data[0].assemblyPlant;
+      this.vinObject.serialNumber = data[0].serialNumber;
+      this.exchange();
     })
   }
 
