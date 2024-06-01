@@ -10,6 +10,7 @@ import { PassThrough } from 'stream';
 import { PasswordResetComponent } from './components/pages/password-reset/password-reset.component';
 import { CartComponent } from './components/pages/cart/cart.component';
 import { VinAdminComponent } from './components/pages/vin-admin/vin-admin.component';
+import { BrakesComponent } from './components/pages/brakes/brakes.component';
 
 export const routes: Routes = [
     {
@@ -54,6 +55,10 @@ export const routes: Routes = [
             {
                 path: 'vin-admin',
                 component: VinAdminComponent
+            },
+            {
+                path: 'brakes',
+                component: BrakesComponent
             }
         ]
     }
