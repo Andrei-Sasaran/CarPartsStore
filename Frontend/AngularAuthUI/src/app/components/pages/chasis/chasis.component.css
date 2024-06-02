@@ -11,6 +11,10 @@
     padding-left: 30px;
 }
 
+.fa-solid {
+    cursor: pointer;
+}
+
 .input-field {
     border-radius: 0px;
     padding: 20px;

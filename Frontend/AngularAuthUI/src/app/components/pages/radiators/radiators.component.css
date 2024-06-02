@@ -21,6 +21,10 @@
     color: #4343ff;
 }
 
+.fa-solid {
+    cursor: pointer;
+}
+
 .fa-screwdriver-wrench {
     font-size: 32px;
     padding-left: 25px;

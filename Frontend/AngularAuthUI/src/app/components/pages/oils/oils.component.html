@@ -7,29 +7,29 @@
                         <a class="fa-solid fa-screwdriver-wrench"></a>
                     </li>
                     <li class="nav-item">
-                        <a class="fa-solid fa-house" href="/dashboard"> Home</a>
+                        <a class="fa-solid fa-house" (click)="toDashboard()"> Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="fa-solid fa-user" href="/account"> Account</a>
+                        <a class="fa-solid fa-user" (click)="toAccount()"> Account</a>
                     </li>
                     <li class="nav-item">
-                        <a class="fa-solid fa-cart-shopping" href="/cart"> Cart</a>
+                        <a class="fa-solid fa-cart-shopping" (click)="toCart()"> Cart</a>
                     </li>
                     <li class="nav-item">
-                        <a class="fa-solid fa-car" href="/vin"> VIN</a>
+                        <a class="fa-solid fa-car" (click)="toVin()"> VIN</a>
                     </li>
                     <li class="nav-item">
                         <div class="dropdown">
                             <button class="fa-solid dropbtn bg-dark">Parts</button>
                             <div class="fa-solid dropdown-content">
-                                <a href="/brakes">Brakes</a>
-                                <a href="/engines">Engines</a>
-                                <!-- <a href="/oils">Oils</a> -->
-                                <a href="/radiators">Radiators</a>
-                                <a href="/suspensions">Suspensions</a>
-                                <a href="/transmisions">Transmisions</a>
-                                <a href="/brakes">Wheels</a>
-                                <a href="/chasis">Chasis</a>
+                                <a (click)="toBrakes()">Brakes</a>
+                                <a (click)="toEngines()">Engines</a>
+                                <a (click)="toOils()">Oils</a>
+                                <a (click)="toRadiators()">Radiators</a> 
+                                <a (click)="toSuspensions()">Suspensions</a>
+                                <a (click)="toTransmisions()">Transmisions</a>
+                                <a (click)="toWheels()">Wheels</a>
+                                <a (click)="toChasis()">Chasis</a>
                             </div>
                         </div>
                     </li>

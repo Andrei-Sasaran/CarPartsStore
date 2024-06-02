@@ -11,6 +11,13 @@ import { PasswordResetComponent } from './components/pages/password-reset/passwo
 import { CartComponent } from './components/pages/cart/cart.component';
 import { VinAdminComponent } from './components/pages/vin-admin/vin-admin.component';
 import { BrakesComponent } from './components/pages/brakes/brakes.component';
+import { EnginesComponent } from './components/pages/engines/engines.component';
+import { OilsComponent } from './components/pages/oils/oils.component';
+import { RadiatorsComponent } from './components/pages/radiators/radiators.component';
+import { SuspensionsComponent } from './components/pages/suspensions/suspensions.component';
+import { TransmisionsComponent } from './components/pages/transmisions/transmisions.component';
+import { WheelsComponent } from './components/pages/wheels/wheels.component';
+import { ChasisComponent } from './components/pages/chasis/chasis.component';
 
 export const routes: Routes = [
     {
@@ -59,7 +66,35 @@ export const routes: Routes = [
             {
                 path: 'brakes',
                 component: BrakesComponent
-            }
+            },
+            {
+                path: 'engines',
+                component: EnginesComponent
+            },
+            {
+                path: 'oils',
+                component: OilsComponent
+            },
+            {
+                path: 'radiators',
+                component: RadiatorsComponent
+            },
+            {
+                path: 'suspensions',
+                component: SuspensionsComponent
+            },
+            {
+                path: 'transmisions',
+                component: TransmisionsComponent
+            },
+            {
+                path: 'wheels',
+                component: WheelsComponent
+            },
+            {
+                path: 'chasis',
+                component: ChasisComponent
+            },
         ]
     }
 ];

@@ -21,6 +21,10 @@
     padding-left: 25px;
 }
 
+.fa-solid {
+    cursor: pointer;
+}
+
 .alert {
     border-radius: 5px;
     margin: auto;

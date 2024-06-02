@@ -94,6 +94,10 @@
     font-size: 150%;
 }
 
+.fa-solid {
+    cursor: pointer;
+}
+
 .panel-image {
     margin: auto;
     height: 90%;
