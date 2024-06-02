@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, model } from '@angular/core';
 import { PagesService } from '../pages.service';
 import { Router } from '@angular/router';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
@@ -8,16 +8,27 @@ import { FormsModule } from '@angular/forms';
 @Component({
   selector: 'app-brakes',
   standalone: true,
-  imports: [],
+  imports: [CommonModule, FormsModule, HttpClientModule],
   templateUrl: './brakes.component.html',
   styleUrl: './brakes.component.css'
 })
 export class BrakesComponent {
  
   email:string='';
+  brakesArray: any;
 
-  constructor(private pagesService:PagesService,  private router:Router) {
+  constructor(private pagesService:PagesService, private http: HttpClient, private router: Router) {
     this.pagesService.getEmail.subscribe(e => this.email = e);;
+  }
+
+  ngOnInit() {
+    this.Brakes();
+  }
+
+  Brakes() {
+    this.http.get('http://localhost:57468/api/Brakes').subscribe((data:any) => {
+      this.brakesArray = data;
+    })
   }
 
   toDashboard() {
