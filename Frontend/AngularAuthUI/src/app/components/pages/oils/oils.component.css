@@ -1,14 +1,20 @@
 .outer-image {
-    height: 100vh;
+    height: fit-content;
     background-image: url('../../../../../../../Images/CarPartsStoreIMAGE.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top;
+    max-height: auto;
+
 }
 
 .nav-item {
     padding: 10px;
     padding-left: 30px;
+}
+
+.fa-solid {
+    cursor: pointer;
 }
 
 .input-field {
@@ -19,10 +25,6 @@
     align-items: center;
     cursor: pointer;
     color: #4343ff;
-}
-
-.fa-solid {
-    cursor: pointer;
 }
 
 .fa-screwdriver-wrench {
@@ -76,4 +78,55 @@
 /* Change the background color of the dropdown button when the dropdown content is shown */
 .dropdown:hover .dropbtn {
     background-color: #337ab7;
+}
+
+/* centered container */
+.items-container {
+    margin-top: 2%;
+    width: 80%;
+    height: auto;
+    background-color: azure;
+    border-radius: 20px;
+    margin-bottom: 2%;
+}
+
+.div5 {
+    height: 5%;
+    width: auto;
+}
+
+/* grid for the items*/
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 10px;
+    padding: 10px;
+}
+
+.grid-item {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+.grid-item-picture {
+    height: min-content;
+    margin: 5px;
+    border-radius: 20px;
+}
+
+.image-display {
+    border-radius: 20px;
+    width: 35vh;
+    height: 35vh
+}
+
+.additional-item-selector {
+    margin-top: 20px;
+}
+
+.item-details p {
+    margin: 5px 0;
 }

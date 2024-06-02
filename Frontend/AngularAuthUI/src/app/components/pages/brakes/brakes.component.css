@@ -1,15 +1,20 @@
 .outer-image {
-    height: 100%;
-    max-height: fit-content;
+    height: fit-content;
     background-image: url('../../../../../../../Images/CarPartsStoreIMAGE.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top;
+    max-height: auto;
+
 }
 
 .nav-item {
     padding: 10px;
     padding-left: 30px;
+}
+
+.fa-solid {
+    cursor: pointer;
 }
 
 .input-field {
@@ -25,10 +30,6 @@
 .fa-screwdriver-wrench {
     font-size: 32px;
     padding-left: 25px;
-}
-
-.fa-solid {
-    cursor: pointer;
 }
 
 /* Dropdown Button */
@@ -81,11 +82,17 @@
 
 /* centered container */
 .items-container {
-    margin-top: 5%;
+    margin-top: 2%;
     width: 80%;
     height: auto;
     background-color: azure;
     border-radius: 20px;
+    margin-bottom: 2%;
+}
+
+.div5 {
+    height: 5%;
+    width: auto;
 }
 
 /* grid for the items*/
@@ -100,72 +107,26 @@
 .grid-item {
     background-color: #f0f0f0;
     border: 1px solid #ccc;
-    padding: 20px;
     text-align: center;
     font-size: 1.2em;
 }
 
 .grid-item-picture {
-
-    background-repeat: no-repeat;
-    background-size: contain;
-    width: 25vh;
-    height: 25vh;
+    height: min-content;
+    margin: 5px;
     border-radius: 20px;
-    margin-bottom: 10px;
+}
+
+.image-display {
+    border-radius: 20px;
+    width: 35vh;
+    height: 35vh
 }
 
 .additional-item-selector {
     margin-top: 20px;
 }
 
-.grid-item img {
-
-    height: auto;
-    margin-bottom: 10px;
-}
-
 .item-details p {
     margin: 5px 0;
-}
-
-/* images, cuz html is dumb af */
-.bg1 {
-    background-image: url('../../../../../../../SQLScripts/ii/brakes/1.jpg');
-}
-
-.bg2 {
-    background-image: url('../../../../../../../SQLScripts/ii/brakes/2.jpg');
-}
-
-.bg3 {
-    background-image: url('../../../../../../../SQLScripts/ii/brakes/3.jpg');
-}
-
-.bg4 {
-    background-image: url('../../../../../../../SQLScripts/ii/brakes/4.jpg');
-}
-
-.bg5 {
-    background-image: url('../../../../../../../SQLScripts/ii/brakes/5.jpg');
-}
-
-.bg6 {
-    background-image: url('../../../../../../../SQLScripts/ii/brakes/6.jpg');
-}
-
-.bg7 {
-    background-image: url('../../../../../../../SQLScripts/ii/brakes/7.jpg');
-}
-
-.bg8 {
-    background-image: url('../../../../../../../SQLScripts/ii/brakes/8.jpg');
-}
-
-.bg9 {
-    background-image: url('../../../../../../../SQLScripts/ii/brakes/9.jpg');
-}
-
-.bg10 {
-    background-image: url('../../../../../../../SQLScripts/ii/brakes/10.jpg');
 }

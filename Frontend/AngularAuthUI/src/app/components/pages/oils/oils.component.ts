@@ -8,15 +8,26 @@ import { FormsModule } from '@angular/forms';
 @Component({
   selector: 'app-oils',
   standalone: true,
-  imports: [],
+  imports: [HttpClientModule, CommonModule, FormsModule],
   templateUrl: './oils.component.html',
   styleUrl: './oils.component.css'
 })
 export class OilsComponent {
   email:string='';
+  oilsArray: any;
 
-  constructor(private pagesService:PagesService,  private router:Router) {
+  constructor(private pagesService:PagesService, private http: HttpClient, private router:Router) {
     this.pagesService.getEmail.subscribe(e => this.email = e);;
+  }
+
+  ngOnInit() {
+    this.Oils();
+  }
+
+  Oils() {
+    this.http.get('http://localhost:57468/api/MotorOil').subscribe((data:any) => {
+      this.oilsArray = data;
+    })
   }
 
   toDashboard() {
