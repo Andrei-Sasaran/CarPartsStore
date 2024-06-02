@@ -27,7 +27,7 @@ export class EnginesComponent {
   }
 
   Engines() {
-    this.http.get('http://localhost:57468/api/Engines').subscribe((data:any) => {
+    this.http.get('http://localhost:57468/api/Engine').subscribe((data:any) => {
       this.enginesArray = data;
     })
   }
