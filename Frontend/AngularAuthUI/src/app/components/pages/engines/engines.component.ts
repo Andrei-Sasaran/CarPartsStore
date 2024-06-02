@@ -16,9 +16,20 @@ import { FormsModule } from '@angular/forms';
 export class EnginesComponent {
 
   email:string='';
+  enginesArray: any;
 
-  constructor(private pagesService:PagesService,  private router:Router) {
+  constructor(private pagesService:PagesService, private http: HttpClient, private router:Router) {
     this.pagesService.getEmail.subscribe(e => this.email = e);;
+  }
+
+  ngOnInit() {
+    this.Engines();
+  }
+
+  Engines() {
+    this.http.get('http://localhost:57468/api/Engines').subscribe((data:any) => {
+      this.enginesArray = data;
+    })
   }
 
   toDashboard() {
