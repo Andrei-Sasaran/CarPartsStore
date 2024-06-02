@@ -8,15 +8,27 @@ import { FormsModule } from '@angular/forms';
 @Component({
   selector: 'app-wheels',
   standalone: true,
-  imports: [],
+  imports: [HttpClientModule, CommonModule, FormsModule],
   templateUrl: './wheels.component.html',
   styleUrl: './wheels.component.css'
 })
 export class WheelsComponent {
-  email:string='';
 
-  constructor(private pagesService:PagesService,  private router:Router) {
+  email:string='';
+  wheelsArray:any;
+
+  constructor(private pagesService:PagesService, private http: HttpClient, private router:Router) {
     this.pagesService.getEmail.subscribe(e => this.email = e);;
+  }
+
+  ngOnInit() {
+    this.Engines();
+  }
+
+  Engines() {
+    this.http.get('http://localhost:57468/api/Wheels').subscribe((data:any) => {
+      this.wheelsArray = data;
+    })
   }
 
   toDashboard() {

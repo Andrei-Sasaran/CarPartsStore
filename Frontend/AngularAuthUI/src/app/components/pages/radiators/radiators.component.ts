@@ -8,15 +8,26 @@ import { FormsModule } from '@angular/forms';
 @Component({
   selector: 'app-radiators',
   standalone: true,
-  imports: [],
+  imports: [HttpClientModule, CommonModule, FormsModule],
   templateUrl: './radiators.component.html',
   styleUrl: './radiators.component.css'
 })
 export class RadiatorsComponent {
   email:string='';
+  radiatorsArray:any;
 
-  constructor(private pagesService:PagesService,  private router:Router) {
+  constructor(private pagesService:PagesService, private http: HttpClient, private router:Router) {
     this.pagesService.getEmail.subscribe(e => this.email = e);;
+  }
+
+  ngOnInit() {
+    this.Engines();
+  }
+
+  Engines() {
+    this.http.get('http://localhost:57468/api/Radiator').subscribe((data:any) => {
+      this.radiatorsArray = data;
+    })
   }
 
   toDashboard() {

@@ -8,15 +8,26 @@ import { FormsModule } from '@angular/forms';
 @Component({
   selector: 'app-suspensions',
   standalone: true,
-  imports: [],
+  imports: [HttpClientModule, CommonModule, FormsModule],
   templateUrl: './suspensions.component.html',
   styleUrl: './suspensions.component.css'
 })
 export class SuspensionsComponent {
   email:string='';
+  suspensionsArray:any;
 
-  constructor(private pagesService:PagesService,  private router:Router) {
+  constructor(private pagesService:PagesService, private http: HttpClient, private router:Router) {
     this.pagesService.getEmail.subscribe(e => this.email = e);;
+  }
+
+  ngOnInit() {
+    this.Radiators();
+  }
+
+  Radiators() {
+    this.http.get('http://localhost:57468/api/Suspension').subscribe((data:any) => {
+      this.suspensionsArray = data;
+    })
   }
 
   toDashboard() {

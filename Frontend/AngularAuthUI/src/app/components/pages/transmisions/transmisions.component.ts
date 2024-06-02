@@ -8,15 +8,27 @@ import { FormsModule } from '@angular/forms';
 @Component({
   selector: 'app-transmisions',
   standalone: true,
-  imports: [],
+  imports: [HttpClientModule, CommonModule, FormsModule],
   templateUrl: './transmisions.component.html',
   styleUrl: './transmisions.component.css'
 })
 export class TransmisionsComponent {
-  email:string='';
 
-  constructor(private pagesService:PagesService,  private router:Router) {
+  email:string='';
+  transmisionsArray:any;
+
+  constructor(private pagesService:PagesService, private http: HttpClient, private router:Router) {
     this.pagesService.getEmail.subscribe(e => this.email = e);;
+  }
+
+  ngOnInit() {
+    this.Engines();
+  }
+
+  Engines() {
+    this.http.get('http://localhost:57468/api/Suspension').subscribe((data:any) => {
+      this.transmisionsArray = data;
+    })
   }
 
   toDashboard() {
