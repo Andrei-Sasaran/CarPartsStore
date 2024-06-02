@@ -31,6 +31,10 @@ export class BrakesComponent {
     })
   }
 
+  addToCart(id:number) {
+    
+  }
+
   toDashboard() {
     this.pagesService.setEmail(this.email);
     this.router.navigateByUrl('/dashboard');
