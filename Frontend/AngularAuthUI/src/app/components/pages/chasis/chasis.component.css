@@ -77,3 +77,94 @@
 .dropdown:hover .dropbtn {
     background-color: #337ab7;
 }
+
+/* centered container */
+.items-container {
+    margin-top: 5%;
+    width: 80%;
+    height: auto;
+    background-color: azure;
+    border-radius: 20px;
+}
+
+/* grid for the items*/
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 10px;
+    padding: 10px;
+}
+
+.grid-item {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    padding: 20px;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+.grid-item-picture {
+
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 25vh;
+    height: 25vh;
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
+
+.additional-item-selector {
+    margin-top: 20px;
+}
+
+.grid-item img {
+
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.item-details p {
+    margin: 5px 0;
+}
+
+/* images, cuz html is dumb af */
+.bg11 {
+    background-image: url('../../../../../../../SQLScripts/ii/chasis/1.jpg');
+}
+
+.bg2 {
+    background-image: url('../../../../../../../SQLScripts/ii/chasis/2.jpg');
+}
+
+.bg3 {
+    background-image: url('../../../../../../../SQLScripts/ii/chasis/3.jpg');
+}
+
+.bg4 {
+    background-image: url('../../../../../../../SQLScripts/ii/chasis/4.jpg');
+}
+
+.bg5 {
+    background-image: url('../../../../../../../SQLScripts/ii/chasis/5.jpg');
+}
+
+.bg6 {
+    background-image: url('../../../../../../../SQLScripts/ii/chasis/6.jpg');
+}
+
+.bg7 {
+    background-image: url('../../../../../../../SQLScripts/ii/chasis/7.jpg');
+}
+
+.bg8 {
+    background-image: url('../../../../../../../SQLScripts/ii/chasis/8.jpg');
+}
+
+.bg9 {
+    background-image: url('../../../../../../../SQLScripts/ii/chasis/9.jpg');
+}
+
+.bg10 {
+    background-image: url('../../../../../../../SQLScripts/ii/chasis/10.jpg');
+}

@@ -27,6 +27,10 @@
     padding-left: 25px;
 }
 
+.fa-solid {
+    cursor: pointer;
+}
+
 /* Dropdown Button */
 .dropbtn {
     /* background-color: #4343ff; */

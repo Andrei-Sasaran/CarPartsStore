@@ -37,4 +37,44 @@ export class DashboardComponent {
     this.router.navigateByUrl('/vin');
   }
   
+  toBrakes() {
+    this.pagesService.setEmail(this.email);
+    this.router.navigateByUrl('/brakes');
+  }
+
+  toEngines() {
+    this.pagesService.setEmail(this.email);
+    this.router.navigateByUrl('/engines');
+  }
+
+  toOils() {
+    this.pagesService.setEmail(this.email);
+    this.router.navigateByUrl('/oils');
+  }
+
+  toRadiators() {
+    this.pagesService.setEmail(this.email);
+    this.router.navigateByUrl('/radiators');
+  }
+
+  toSuspensions() {
+    this.pagesService.setEmail(this.email);
+    this.router.navigateByUrl('/suspensions');
+  }
+
+  toTransmisions() {
+    this.pagesService.setEmail(this.email);
+    this.router.navigateByUrl('/transmisions');
+  }
+
+  toWheels() {
+    this.pagesService.setEmail(this.email);
+    this.router.navigateByUrl('/wheels');
+  }
+
+  toChasis() {
+    this.pagesService.setEmail(this.email);
+    this.router.navigateByUrl('/chasis');
+  }
+
 }
