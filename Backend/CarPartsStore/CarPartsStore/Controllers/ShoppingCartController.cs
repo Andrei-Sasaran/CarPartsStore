@@ -106,5 +106,30 @@ namespace CarPartsStore.Controllers
                 return "Insert failed!";
             }
         }
+        [Route("api/ShoppingCart/DeleteFromShoppingCart")]
+        [HttpPost]
+        public string DeleteFromShoppingCart(ShoppingCart shop)
+        {
+            try
+            {
+                string query = @"
+                delete from "+ shop.tableName +@"
+                where pieceCell = '"+ shop.pieceCell +@"' and pieceId = "+ shop.pieceId +@"
+                ";
+                DataTable dataTable = new DataTable();
+                using (var connection = new SqlConnection(ConfigurationManager.ConnectionStrings["CarPartsStoreDB"].ConnectionString))
+                using (var cmd = new SqlCommand(query, connection))
+                using (var dataAdapter = new SqlDataAdapter(cmd))
+                {
+                    cmd.CommandType = CommandType.Text;
+                    dataAdapter.Fill(dataTable);
+                }
+                return "Deleted with succes!";
+            }
+            catch (Exception)
+            {
+                return "Delete failed!";
+            }
+        }
     }
 }
