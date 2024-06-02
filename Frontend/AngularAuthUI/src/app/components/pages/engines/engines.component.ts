@@ -15,10 +15,10 @@ import { FormsModule } from '@angular/forms';
 })
 export class EnginesComponent {
 
-  email:string='';
+  email: string = '';
   enginesArray: any;
 
-  constructor(private pagesService:PagesService, private http: HttpClient, private router:Router) {
+  constructor(private pagesService: PagesService, private http: HttpClient, private router: Router) {
     this.pagesService.getEmail.subscribe(e => this.email = e);;
   }
 
@@ -26,8 +26,12 @@ export class EnginesComponent {
     this.Engines();
   }
 
+  addToCart(id: number) {
+
+  }
+
   Engines() {
-    this.http.get('http://localhost:57468/api/Engine').subscribe((data:any) => {
+    this.http.get('http://localhost:57468/api/Engine').subscribe((data: any) => {
       this.enginesArray = data;
     })
   }

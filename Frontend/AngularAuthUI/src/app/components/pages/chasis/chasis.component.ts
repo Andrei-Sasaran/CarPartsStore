@@ -14,7 +14,7 @@ import { FormsModule } from '@angular/forms';
 })
 export class ChasisComponent {
   email: string = '';
-  chasisArray:any;
+  chasisArray: any;
 
   constructor(private pagesService: PagesService, private http: HttpClient, private router: Router) {
     this.pagesService.getEmail.subscribe(e => this.email = e);
@@ -24,8 +24,12 @@ export class ChasisComponent {
     this.Chasis();
   }
 
+  addToCart(id: number) {
+
+  }
+
   Chasis() {
-    this.http.get('http://localhost:57468/api/Chasis').subscribe((data:any) => {
+    this.http.get('http://localhost:57468/api/Chasis').subscribe((data: any) => {
       this.chasisArray = data;
     })
   }

@@ -13,10 +13,10 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './suspensions.component.css'
 })
 export class SuspensionsComponent {
-  email:string='';
-  suspensionsArray:any;
+  email: string = '';
+  suspensionsArray: any;
 
-  constructor(private pagesService:PagesService, private http: HttpClient, private router:Router) {
+  constructor(private pagesService: PagesService, private http: HttpClient, private router: Router) {
     this.pagesService.getEmail.subscribe(e => this.email = e);;
   }
 
@@ -24,8 +24,12 @@ export class SuspensionsComponent {
     this.Radiators();
   }
 
+  addToCart(id: number) {
+
+  }
+
   Radiators() {
-    this.http.get('http://localhost:57468/api/Suspension').subscribe((data:any) => {
+    this.http.get('http://localhost:57468/api/Suspension').subscribe((data: any) => {
       this.suspensionsArray = data;
     })
   }

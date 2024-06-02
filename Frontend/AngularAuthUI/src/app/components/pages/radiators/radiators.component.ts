@@ -13,19 +13,22 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './radiators.component.css'
 })
 export class RadiatorsComponent {
-  email:string='';
-  radiatorsArray:any;
+  email: string = '';
+  radiatorsArray: any;
 
-  constructor(private pagesService:PagesService, private http: HttpClient, private router:Router) {
+  constructor(private pagesService: PagesService, private http: HttpClient, private router: Router) {
     this.pagesService.getEmail.subscribe(e => this.email = e);;
   }
 
   ngOnInit() {
     this.Engines();
   }
+  addToCart(id: number) {
+
+  }
 
   Engines() {
-    this.http.get('http://localhost:57468/api/Radiator').subscribe((data:any) => {
+    this.http.get('http://localhost:57468/api/Radiator').subscribe((data: any) => {
       this.radiatorsArray = data;
     })
   }

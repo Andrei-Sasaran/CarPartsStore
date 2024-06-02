@@ -13,10 +13,10 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './oils.component.css'
 })
 export class OilsComponent {
-  email:string='';
+  email: string = '';
   oilsArray: any;
 
-  constructor(private pagesService:PagesService, private http: HttpClient, private router:Router) {
+  constructor(private pagesService: PagesService, private http: HttpClient, private router: Router) {
     this.pagesService.getEmail.subscribe(e => this.email = e);;
   }
 
@@ -24,8 +24,12 @@ export class OilsComponent {
     this.Oils();
   }
 
+  addToCart(id: number) {
+
+  }
+
   Oils() {
-    this.http.get('http://localhost:57468/api/MotorOil').subscribe((data:any) => {
+    this.http.get('http://localhost:57468/api/MotorOil').subscribe((data: any) => {
       this.oilsArray = data;
     })
   }
