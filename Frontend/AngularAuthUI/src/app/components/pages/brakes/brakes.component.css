@@ -1,5 +1,6 @@
 .outer-image {
-    height: 100vh;
+    height: 100%;
+    max-height: fit-content;
     background-image: url('../../../../../../../Images/CarPartsStoreIMAGE.jpg');
     background-size: cover;
     background-repeat: no-repeat;
@@ -72,4 +73,95 @@
 /* Change the background color of the dropdown button when the dropdown content is shown */
 .dropdown:hover .dropbtn {
     background-color: #337ab7;
+}
+
+/* centered container */
+.items-container {
+    margin-top: 5%;
+    width: 80%;
+    height: auto;
+    background-color: azure;
+    border-radius: 20px;
+}
+
+/* grid for the items*/
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 10px;
+    padding: 10px;
+}
+
+.grid-item {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    padding: 20px;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+.grid-item-picture {
+
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 25vh;
+    height: 25vh;
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
+
+.additional-item-selector {
+    margin-top: 20px;
+}
+
+.grid-item img {
+
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.item-details p {
+    margin: 5px 0;
+}
+
+/* images, cuz html is dumb af */
+.bg1 {
+    background-image: url('../../../../../../../SQLScripts/ii/brakes/1.jpg');
+}
+
+.bg2 {
+    background-image: url('../../../../../../../SQLScripts/ii/brakes/2.jpg');
+}
+
+.bg3 {
+    background-image: url('../../../../../../../SQLScripts/ii/brakes/3.jpg');
+}
+
+.bg4 {
+    background-image: url('../../../../../../../SQLScripts/ii/brakes/4.jpg');
+}
+
+.bg5 {
+    background-image: url('../../../../../../../SQLScripts/ii/brakes/5.jpg');
+}
+
+.bg6 {
+    background-image: url('../../../../../../../SQLScripts/ii/brakes/6.jpg');
+}
+
+.bg7 {
+    background-image: url('../../../../../../../SQLScripts/ii/brakes/7.jpg');
+}
+
+.bg8 {
+    background-image: url('../../../../../../../SQLScripts/ii/brakes/8.jpg');
+}
+
+.bg9 {
+    background-image: url('../../../../../../../SQLScripts/ii/brakes/9.jpg');
+}
+
+.bg10 {
+    background-image: url('../../../../../../../SQLScripts/ii/brakes/10.jpg');
 }
