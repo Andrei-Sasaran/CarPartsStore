@@ -13,10 +13,10 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './chasis.component.css'
 })
 export class ChasisComponent {
-  email:string='';
+  email: string = '';
 
-  constructor(private pagesService:PagesService,  private router:Router) {
-    this.pagesService.getEmail.subscribe(e => this.email = e);;
+  constructor(private pagesService: PagesService, private router: Router) {
+    this.pagesService.getEmail.subscribe(e => this.email = e);
   }
 
   toDashboard() {
