@@ -8,15 +8,26 @@ import { FormsModule } from '@angular/forms';
 @Component({
   selector: 'app-chasis',
   standalone: true,
-  imports: [],
+  imports: [HttpClientModule, CommonModule, FormsModule],
   templateUrl: './chasis.component.html',
   styleUrl: './chasis.component.css'
 })
 export class ChasisComponent {
   email: string = '';
+  chasisArray:any;
 
-  constructor(private pagesService: PagesService, private router: Router) {
+  constructor(private pagesService: PagesService, private http: HttpClient, private router: Router) {
     this.pagesService.getEmail.subscribe(e => this.email = e);
+  }
+
+  ngOnInit() {
+    this.Chasis();
+  }
+
+  Chasis() {
+    this.http.get('http://localhost:57468/api/Chasis').subscribe((data:any) => {
+      this.chasisArray = data;
+    })
   }
 
   toDashboard() {
