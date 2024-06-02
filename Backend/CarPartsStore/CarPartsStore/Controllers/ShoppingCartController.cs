@@ -16,31 +16,26 @@ namespace CarPartsStore.Controllers
     {
         [Route("api/ShoppingCart/CreateShoppingCart")]
         [HttpPost]
-        public string CreateShoppingCart(ShoppingCart shop)
+        public HttpResponseMessage CreateShoppingCart(ShoppingCart shop)
         {
-            try
-            {
-                string query = @"
-                        Create table ["+ shop.tableName +@"]
+
+            string query = @"
+                        Create table [" + shop.tableName + @"]
                         (
                         [pieceCell] nvarchar(100),
                         [pieceId] int
                         )";
-                DataTable dataTable = new DataTable();
-                using (var connection = new SqlConnection(ConfigurationManager.ConnectionStrings["CarPartsStoreDB"].ConnectionString))
-                using (var cmd = new SqlCommand(query, connection))
-                using (var dataAdapter = new SqlDataAdapter(cmd))
-                {
-                    cmd.CommandType = CommandType.Text;
-                    dataAdapter.Fill(dataTable);
-                }
-                return "Created with succes!";
-            }
-            catch (Exception)
+            DataTable dataTable = new DataTable();
+            using (var connection = new SqlConnection(ConfigurationManager.ConnectionStrings["CarPartsStoreDB"].ConnectionString))
+            using (var cmd = new SqlCommand(query, connection))
+            using (var dataAdapter = new SqlDataAdapter(cmd))
             {
-                return "Creation failed!";
+                cmd.CommandType = CommandType.Text;
+                dataAdapter.Fill(dataTable);
             }
+            return Request.CreateResponse(HttpStatusCode.OK, dataTable);
         }
+            
         [Route("api/ShoppingCart/DeleteShoppingCart")]
         [HttpPost]
         public string DeleteShoppingCart(ShoppingCart shop)
@@ -67,7 +62,7 @@ namespace CarPartsStore.Controllers
         public HttpResponseMessage Get(ShoppingCart shop)
         {
             string query = @"
-                    select * from "+ shop.tableName +@"
+                    select * from " + shop.tableName + @"
                     ";
             DataTable dataTable = new DataTable();
             using (var connection = new SqlConnection(ConfigurationManager.ConnectionStrings["CarPartsStoreDB"].ConnectionString))
@@ -86,7 +81,7 @@ namespace CarPartsStore.Controllers
             try
             {
                 string query = @"
-                        insert into ["+ shop.tableName+@"] values
+                        insert into [" + shop.tableName + @"] values
                         (
                         '" + shop.pieceCell + @"',
                         '" + shop.pieceId + @"'

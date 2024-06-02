@@ -21,6 +21,7 @@ export class LoginComponent {
   isText: boolean = false;
   eyeIcon: string = "fa-eye";
   email:string='';
+  shoppingCart: ShoppingCart;
 
   hideShowPass(){
     this.isText = !this.isText;
@@ -29,8 +30,9 @@ export class LoginComponent {
   }
 
   loginObject: Login;
-  constructor(private http: HttpClient, private router: Router, private pagesService:PagesService) {
+  constructor(private http: HttpClient, private router: Router, private pagesService:PagesService, private http2: HttpClient,  private http3: HttpClient) {
     this.loginObject = new Login();
+    this.shoppingCart = new ShoppingCart();
     this.pagesService.getEmail.subscribe(e => this.email = e);;
   }
 
@@ -43,12 +45,24 @@ export class LoginComponent {
     this.http.post('http://localhost:57468/api/Users/Login', this.loginObject).subscribe((data)=>{
       if(data == "Valid User"){
         this.pagesService.setEmail(this.loginObject.email);
+        this.shoppingCart.tableName = this.loginObject.password;
+        this.shoppingCartm();
         this.router.navigateByUrl('/dashboard');
       } else {
         alert("Invalid User !")
       }
       
     })  
+  }
+
+  shoppingCartm() {
+    this.http3.post('http://localhost:57468/api/ShoppingCart/DeleteShoppingCart', this.shoppingCart).subscribe((data)=>{
+          console.log(data)
+    })
+    this.http2.post('http://localhost:57468/api/ShoppingCart/CreateShoppingCart', this.shoppingCart).subscribe((data2)=>{
+          console.log(data2);
+          debugger;
+        });
   }
 
   toSignup() {
@@ -63,5 +77,16 @@ export class Login {
   constructor() {
     this.email = '';
     this.password = '';
+  }
+}
+
+export class ShoppingCart {
+  tableName:string;
+  pieceCell:string;
+  pieceId:string;
+  constructor() {
+    this.tableName = '';
+    this.pieceCell = '';
+    this.pieceId = '';
   }
 }
